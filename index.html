@@ -1,0 +1,303 @@
+<html lang="zh-ch">
+
+<head>
+    <meta charset="UTF-8">
+    <title>城市预约挂号统一平台</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="center header-part1">
+            <img src="images/icon-call.png" />
+            <span>010-114/116114电话预约</span>
+            <div class="loginAndRegist">
+                <span>欢迎来到城市预约挂号统一平台&emsp;请</span>
+                <span>
+                    <a href="http://www.baidu.com">登录</a>
+                    <a href="http://www.baidu.com">注册</a>
+                    <span>&emsp;&emsp;</span>
+                    <a href="http://www.baidu.com">帮助中心</a>
+                </span>
+            </div>
+        </div>
+        <div class="header-part2">
+            <div class="center">
+                <img src="images/logo.png">
+                <div class="searchButton">
+                    <div class="searchButton-select">
+                        <span id="selected" href="javascript:;" onclick="toggle();">医院</span>
+                        <ul id="selectList" class="hide">
+                                <li onclick="liSelected('医院')">医院</li>
+                                <li onclick="liSelected('科室')">科室</li>
+                                <li onclick="liSelected('疾病')">疾病</li>
+                        </ul>
+                    </div>
+                    <input class="searchButton-input" id="searchButtonInput" placeholder="请输入搜索内容">
+                    <div class="searchButton-submit" onclick="searchButtonSubmit()"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="center container">
+            <div class="allDepartment">全部科室</div>
+            <ul class="navList">
+                <li class="navCrl"><a href="http://www.baidu.com">按医院挂号</a></li>
+                <li class="navCrl"><a href="http://www.baidu.com">按科室挂号</a></li>
+                <li class="navCrl"><a href="http://www.baidu.com">按疾病挂号</a></li>
+                <li class="navCrl"><a href="http://www.baidu.com">最新公告</a></li>
+                <li class="lastNav"><a href="http://www.baidu.com">社会知名医院</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <aside>
+            <ul id="department">
+                <li id="li1Ctrl" class="liCtrl" onmouseover="departmentSelected(1)" onmouseout="departmentUnselected(1)">
+                    <span id="department1Img" class="departmentImg"></span>内科
+                    <a id="a1Ctrl" class="aCtrl" href="http://www.baidu.com">高血压</a>
+                    <a id="a11Ctrl" class="aCtrl" href="http://www.baidu.com">冠心病</a>
+                </li>
+                <li id="li2Ctrl" class="liCtrl" onmouseover="departmentSelected(2)" onmouseout="departmentUnselected(2)">
+                    <span id="department2Img" class="departmentImg"></span>外科
+                    <a id="a2Ctrl" class="aCtrl" href="http://www.baidu.com">肾结石</a>
+                    <a id="a22Ctrl" class="aCtrl" href="http://www.baidu.com">脑外伤</a>
+                </li>
+            </ul>
+            <div id="department1Illness" style="display: none" onmouseover="departmentSelected(3)" onmouseout="departmentUnselected(3)">
+                <span>内科</span>
+                <ul>
+                    <li><a href="http://www.baidu.com">心血管内科|</a></li>
+                    <li><a href="http://www.baidu.com">神经内科|</a></li>
+                    <li><a href="http://www.baidu.com">内分泌科|</a></li>
+                    <li><a href="http://www.baidu.com">血液科|</a></li>
+                    <li><a href="http://www.baidu.com">心血管内科|</a></li>
+                    <li><a href="http://www.baidu.com">神经内科|</a></li>
+                    <li><a href="http://www.baidu.com">内分泌科|</a></li>
+                    <li><a href="http://www.baidu.com">血液科|</a></li>
+                    <li><a href="http://www.baidu.com">心血管内科|</a></li>
+                    <li><a href="http://www.baidu.com">神经内科|</a></li>
+                    <li><a href="http://www.baidu.com">内分泌科|</a></li>
+                    <li><a href="http://www.baidu.com">血液科|</a></li>
+                    <li><a href="http://www.baidu.com">内分泌科|</a></li>
+                    <li><a href="http://www.baidu.com">血液科|</a></li>
+                </ul>
+            </div>
+            <div id="department2Illness" style="display: none" onmouseover="departmentSelected(4)" onmouseout="departmentUnselected(4)">
+                <span>外科</span>
+                <ul>
+                    <li><a href="http://www.baidu.com">心血管内科|</a></li>
+                    <li><a href="http://www.baidu.com">神经内科|</a></li>
+                    <li><a href="http://www.baidu.com">内分泌科|</a></li>
+                    <li><a href="http://www.baidu.com">血液科|</a></li>
+                    <li><a href="http://www.baidu.com">心血管内科|</a></li>
+                    <li><a href="http://www.baidu.com">神经内科|</a></li>
+                    <li><a href="http://www.baidu.com">内分泌科|</a></li>
+                    <li><a href="http://www.baidu.com">血液科|</a></li>
+                    <li><a href="http://www.baidu.com">心血管内科|</a></li>
+                    <li><a href="http://www.baidu.com">神经内科|</a></li>
+                    <li><a href="http://www.baidu.com">内分泌科|</a></li>
+                    <li><a href="http://www.baidu.com">血液科|</a></li>
+                    <li><a href="http://www.baidu.com">内分泌科|</a></li>
+                    <li><a href="http://www.baidu.com">血液科|</a></li>
+                </ul>
+                <span>外科常见疾病</span>
+                <ul>
+                    <li><a href="http://www.baidu.com">心血管内科|</a></li>
+                    <li><a href="http://www.baidu.com">神经内科|</a></li>
+                    <li><a href="http://www.baidu.com">内分泌科|</a></li>
+                    <li><a href="http://www.baidu.com">血液科|</a></li>
+                    <li><a href="http://www.baidu.com">心血管内科|</a></li>
+                    <li><a href="http://www.baidu.com">神经内科|</a></li>
+                    <li><a href="http://www.baidu.com">内分泌科|</a></li>
+                    <li><a href="http://www.baidu.com">血液科|</a></li>
+                    <li><a href="http://www.baidu.com">心血管内科|</a></li>
+                    <li><a href="http://www.baidu.com">神经内科|</a></li>
+                    <li><a href="http://www.baidu.com">内分泌科|</a></li>
+                    <li><a href="http://www.baidu.com">血液科|</a></li>
+                    <li><a href="http://www.baidu.com">内分泌科|</a></li>
+                    <li><a href="http://www.baidu.com">血液科|</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div id="banner">
+                <div id="bannerList" style="left: -544px;">
+                    <img src="./images/banner_3.jpg"/>
+                    <img src="./images/banner_1.jpg"/>
+                    <img src="./images/banner_2.jpg"/>
+                    <img src="./images/banner_3.jpg"/>
+                    <img src="./images/banner_1.jpg"/>
+                </div>
+                <div id="bannerButtons">
+                    <span index="1" class="on"></span>
+                    <span index="2"></span>
+                    <span index="3"></span>
+                </div>
+                <!-- 使a标签不跳转但仍然执行其功能，使用href="#"也可起到同样效果 -->
+                <a href="javascript:;" id="prev" class="arrow"></a>
+                <a href="javascript:;" id="next" class="arrow"></a>
+        </div>
+        <div class="quickAppointment">
+            <span>快速预约</span>
+            <section class="inputs">
+                <select id="input-area" onchange="linkageGrade(this)">
+                    <option value="0">医院地区</option>
+                    <option value="1">东城区</option>
+                    <option value="2">西城区</option>
+                </select>
+                <select id="input-grade" onchange="linkageName(this)">
+                    <option value="0">医院等级</option>
+                </select>
+                <select id="input-name" onchange="linkageSubject(this)">
+                    <option value="0">医院名称</option>
+                </select>
+                <select id="input-subject">
+                    <option value="0">医院科室</option>
+                </select>
+                <div class="button-quickQuery" onclick="quickQuery">快速查询</div>
+            </section>
+        </div>
+        <div class="helpCneter">
+            <span>帮助中心</span>
+            <section>
+                <a href="http://www.baidu.com">账号指南</a>
+                <a href="http://www.baidu.com">预约指南</a>
+                <a href="http://www.baidu.com">账号找回</a>
+                <a href="http://www.baidu.com">常见问题</a>
+            </section>
+        </div>
+        <!-- 切换标签区域 -->
+        <div class="tabs">
+            <ul id="tabBar">
+                <li id="tab1" onclick="tabClick(1,'tab','tabBar','tabContent')" style="background-color:#60bff2;color: #FFF;">医院</li>
+                <li id="tab2" onclick="tabClick(2,'tab','tabBar','tabContent')">科室</li>
+            </ul>
+            <div class="tabContent" id="tab1Content" style="display: block">
+                <div class="tabsContent">
+                    <!-- 切换子标签区域 -->
+                    <ul id="subtabBar">
+                        <li id="subtab3" onclick="tabClick(3,'subtab','subtabBar','subtabContent')" style="background-color:#60bff2;color: #FFF;">全部</li>
+                        <li id="subtab4" onclick="tabClick(4,'subtab','subtabBar','subtabContent')">东城区</li>
+                        <li id="subtab5" onclick="tabClick(5,'subtab','subtabBar','subtabContent')">西城区</li>
+                        <li id="subtab6" onclick="tabClick(6,'subtab','subtabBar','subtabContent')">朝阳区</li>
+                        <li id="subtab7" onclick="tabClick(7,'subtab','subtabBar','subtabContent')">丰台区</li>
+                        <li id="subtab8" onclick="tabClick(8,'subtab','subtabBar','subtabContent')">石景山区</li>
+                        <li id="subtab9" onclick="tabClick(9,'subtab','subtabBar','subtabContent')">海淀区</li>
+                        <li id="subtab10" onclick="tabClick(10,'subtab','subtabBar','subtabContent')">门头沟区</li>
+                        <li id="subtab11" onclick="tabClick(11,'subtab','subtabBar','subtabContent')">房山区</li>
+                        <li id="subtab12" onclick="tabClick(12,'subtab','subtabBar','subtabContent')">其他</li>
+                    </ul>
+                    <div class="subtabContent" id="tab3Content" style="display: block">
+                        <div class="tabsContent">
+                            <section>
+                                <img src="images/hospital-1.jpg">
+                                <span class="hospitalName">北京协和医院</span><span class="hospitalGrade">【三级甲等】</span>
+                                <span class="spanCtrl">电话：东院咨询台:010-69155564..</span>
+                                <span class="spanCtrl">地址：[东院]北京市东城区帅府园一号 </span>
+                                <span class="spanCtrl">&emsp;&emsp;&emsp;[西院]北京市西城区大木仓...</span>
+                            </section>
+                            <section>
+                                <img src="images/hospital-2.jpg">
+                                <span class="hospitalName">北京肿瘤医院</span><span class="hospitalGrade">【三级甲等】</span>
+                                <span class="spanCtrl">电话：东院咨询台:010-69155564..</span>
+                                <span class="spanCtrl">地址：[东院]北京市东城区帅府园一号 </span>
+                                <span class="spanCtrl">&emsp;&emsp;&emsp;[西院]北京市西城区大木仓...</span>
+                            </section>
+                            <section>
+                                <img src="images/hospital-3.jpg">
+                                <span class="hospitalName">北京世纪坛医院</span><span class="hospitalGrade">【三级甲等】</span>
+                                <span class="spanCtrl">电话：东院咨询台:010-69155564..</span>
+                                <span class="spanCtrl">地址：[东院]北京市东城区帅府园一号 </span>
+                                <span class="spanCtrl">&emsp;&emsp;&emsp;[西院]北京市西城区大木仓...</span>
+                            </section>
+                            <section>
+                                <img src="images/hospital-4.jpg">
+                                <span class="hospitalName">北京积水潭医院</span><span class="hospitalGrade">【三级甲等】</span>
+                                <span class="spanCtrl">电话：东院咨询台:010-69155564..</span>
+                                <span class="spanCtrl">地址：[东院]北京市东城区帅府园一号 </span>
+                                <span class="spanCtrl">&emsp;&emsp;&emsp;[西院]北京市西城区大木仓...</span>
+                            </section>
+                            <div class="as">
+                                <a href="http://www.baidu.com">首都儿科研究所附属儿童医院<span>【三级甲等】</span></a>
+                                <a href="http://www.baidu.com">首都儿科研究所附属儿童医院<span>【三级甲等】</span></a>
+                                <a href="http://www.baidu.com">首都儿科研究所附属儿童医院<span>【三级甲等】</span></a>
+                                <a href="http://www.baidu.com">首都儿科研究所附属儿童医院<span>【三级甲等】</span></a>
+                                <a href="http://www.baidu.com">首都儿科研究所附属儿童医院<span>【三级甲等】</span></a>
+                                <a href="http://www.baidu.com">首都儿科研究所附属儿童医院<span>【三级甲等】</span></a>
+                            </div>
+                            <a class="backToTop" href="#header">更多医院</a>
+                        </div>
+                    </div>
+                    <div class="subtabContent" id="tab4Content" style="display: none">
+                        <!-- 如果tab内容过多，应该是可以利用<iframe>标签可以包含另一个html的，但又似乎对SEO不太友好，这里不展开 -->
+                        <div class="tabsContent">东城区的医院列表，待开发...</div>
+                    </div>
+                    <div class="subtabContent" id="tab5Content" style="display: none">
+                        <div class="tabsContent">西城区的医院列表，待开发...</div>
+                    </div>
+                    <div class="subtabContent" id="tab6Content" style="display: none">
+                        <div class="tabsContent">朝阳区的医院列表，待开发...</div>
+                    </div>
+                    <div class="subtabContent" id="tab7Content" style="display: none">
+                        <div class="tabsContent">丰台区的医院列表，待开发...</div>
+                    </div>
+                    <div class="subtabContent" id="tab8Content" style="display: none">
+                        <div class="tabsContent">石景山区的医院列表，待开发...</div>
+                    </div>
+                    <div class="subtabContent" id="tab9Content" style="display: none">
+                        <div class="tabsContent">海淀区的医院列表，待开发...</div>
+                    </div>
+                    <div class="subtabContent" id="tab10Content" style="display: none">
+                        <div class="tabsContent">门头沟区的医院列表，待开发...</div>
+                    </div>
+                    <div class="subtabContent" id="tab11Content" style="display: none">
+                        <div class="tabsContent">房山区的医院列表，待开发...</div>
+                    </div>
+                    <div class="subtabContent" id="tab12Content" style="display: none">
+                        <div class="tabsContent">其他的医院列表，待开发...</div>
+                    </div>
+                    <!-- 切换子标签区域end -->
+                </div>
+            </div>
+            <div class="tabContent" id="tab2Content">
+                <div class="tabsContent">科室页面,待开发...</div>
+            </div>
+            <!-- 切换标签区域end -->
+        </div>
+        <div class="news">
+            <div class="news-title">最新公告<a href="http://www.baidu.com">|&emsp;更多</a></div>
+            <section>
+                <a href="http://www.baidu.com">阜外医院特需门诊暂停更新号源通...</a>  
+                <a href="http://www.baidu.com">防护策略升级通知</a>
+                <a href="http://www.baidu.com">阜外医院特需门诊暂停更新号源通...</a>
+                <a href="http://www.baidu.com">防护策略升级通知</a>
+                <a href="http://www.baidu.com">阜外医院特需门诊暂停更新号源通...</a>
+                <a href="http://www.baidu.com">防护策略升级通知</a>
+            </section>
+        </div>
+        <div class="stopAdmissionNews">
+            <div class="stopAdmissionNews-title">停诊公告<a href="http://www.baidu.com">|&emsp;更多</a></div>
+            <section>
+                <a href="http://www.baidu.com">首都医科大学附属北京安贞医院消...</a>  
+                <a href="http://www.baidu.com">首都医科大学附属北京安贞医院妇</a>
+                <a href="http://www.baidu.com">北京安贞医院妇</a>
+                <a href="http://www.baidu.com">首都医科大学附属北京安贞医院消...</a>  
+                <a href="http://www.baidu.com">首都医科大学附属北京安贞医院妇</a>
+                <a href="http://www.baidu.com">北京安贞医院妇</a>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="center">
+            <span>Copyright © 2017慕课网版权所有</span>
+        </div>
+    </footer>
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

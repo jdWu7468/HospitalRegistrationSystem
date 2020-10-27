@@ -1,0 +1,113 @@
+/* 公共样式 */
+/* font-size:0px会解决某部分页面错乱的不可描述的异常的排版，比如换行符等，但是后面的默认字体也会被取消 */
+html, body, div, span, ul, li, a{margin: 0;padding: 0;border: 0;font-size:0px;text-decoration: none;list-style: none}
+.center{width: 1000px;margin: auto;box-sizing:border-box;text-align: center;}
+
+/* 头部 */
+header{width: 100%;height:130px; background-color: #f5f5f5;}
+.header-part1{height:30px;line-height: 30px;color: #868686}
+.header-part1 span{font-size: 13px;float: left}
+.header-part1 img{margin-top: 7px;float: left}
+.loginAndRegist{float: right}
+.loginAndRegist span{float: left}
+.loginAndRegist a{float: left;margin-left: 15px;color: #2DA5E1;font-size: 13px;}
+.header-part2{width: 100%;height:100px;background:#FFF;}
+.header-part2 img{width: 402px;height:74px;float: left;margin-top: 13px;}
+.searchButton{width: 326px;height:38px;float: right;margin-top: 31px;background: url(../images/ui-search.jpg);}
+.searchButton-select{width: 70px;height:38px;color: #A5A2A2;float: left;position: relative;}
+.searchButton span{width: 70px;height:38px;padding-left: 12px;color: #FFF;font-size: 15px;float: left;cursor:pointer;line-height: 38px;text-align: left;box-sizing: border-box;}
+.searchButton-input{width: 208px;height: 28px;margin-top: 5px;margin-left: 3px; border: none;outline: none;float: left;}
+.searchButton-submit{width: 40px;height: 36px;float: right;}
+#selectList{width:67px;background-color: #FFF;position: absolute;top:38px}
+/* z-index要与position: relative搭配使用，否则z-index不生效，生成的ul会被导航栏盖住，点击不了 */
+#selectList li{width:67px; height:24px;color: #A5A2A2;font-size: 15px;z-index: 2;cursor:pointer;}
+.show{display: block;}
+.hide{display: none;}
+
+/* 导航栏 */
+nav{width: 100%;height: 36px;background:#60bff2}
+.container{height:36px}
+.allDepartment{width:190px;height: 36px;background-color:#1fa4f0;color:#FFF;font-size: 16px;text-align: center;line-height: 36px;float: left;}
+.navList{width: 810px;float: left;z-index:1;}
+.navCrl{width:110px;height: 36px;float:left;line-height: 36px;}
+.navList li a{color:#FFF;font-size: 16px;}
+.navList li a:hover{color: #d7f3ff;}
+.lastNav{width:110px;height: 36px;float:right;line-height: 36px;}
+
+/* 主体内容 */
+main{width:1000px;margin:auto;}
+aside{width:190px;height: 423px;float:left;background-color:#1fa4f0;position: relative;}
+.liCtrl{width: 188px;height:39px;padding:9px 0 9px 9px;box-sizing: border-box;font-size: 13px;color:#fff;}
+.liCtrlHover{width: 190px;height:39px;padding:9px 0 9px 9px;box-sizing: border-box;background-color:#FFF;font-size: 13px;color:#868686;}
+.departmentImg{width: 22px;height:22px;background: url(../images/icon-menu.jpg) no-repeat -22px 0;padding-left:22px;font-size: 15px;color:#fff;}
+.departmentImgHover{width: 22px;height:22px;background: url(../images/icon-menu.jpg) no-repeat 0px 0px;padding-left:22px;font-size: 15px;color:#fff;}
+.aCtrl{float: right;font-size: 12px; color: #d7f3ff;margin-right: 5px; margin-top: 3px;}
+.aCtrlHover{float: right;font-size: 12px; color: #868686;margin-right: 5px; margin-top: 3px;}
+#department1Illness{width:539px; height:423px;background:url(../images/bg-menu.jpg) no-repeat;position: absolute;top:0px;left:190px;z-index:3;padding-top:10px;padding-left: 20px;box-sizing: border-box; font-size: 14px;}
+#department1Illness span{width:500px;font-size: 14px;color: #666;float: left;margin-top: 30px}
+#department1Illness ul li a{font-size: 12px;color: #868686;float: left;margin-top: 15px;margin-right: 10px;}
+#department2Illness{width:539px; height:423px;background:url(../images/bg-menu.jpg) no-repeat;position: absolute;top:0px;left:190px;z-index:3;padding-top:10px;padding-left: 20px;box-sizing: border-box;font-size: 14px;}
+#department2Illness span{width:500px;font-size: 14px;color: #666;float: left;margin-top: 30px}
+#department2Illness ul li a{font-size: 12px;color: #868686;float: left;margin-top: 15px;margin-right: 10px;}
+
+
+/* 主体内容：banner滚动栏 */
+#banner {width: 544px; height: 414px;margin-top: 9px;margin-left: 9px; float: left;position: relative;overflow: hidden;}
+#bannerList {width: 2720px;height: 414px;position: absolute;z-index: 1;}
+#bannerList img {width: 544px;float: left;}
+#bannerButtons {width: 70px;height: 12px;bottom: 20px;left: 240px;position: absolute;z-index: 2;display: table-cell;}
+#bannerButtons span {width: 10px;height: 10px;float: left;margin-right: 5px;cursor: pointer;border: 1px solid #fff;border-radius: 50%;background: #333;}
+#bannerButtons .on {background:#1fa4f0;width: 12px;height: 12px;border-radius: 50%;}
+.arrow {width: 40px;height: 40px;top: 180px;display: none;font-size: 36px;font-weight: bold;line-height: 39px;position: absolute;z-index: 2;cursor: pointer;text-align: center;color: #fff;background-color: RGBA(0,0,0,.3);}
+.arrow:hover {background-color: RGBA(0,0,0,.7);}
+#banner:hover .arrow {display: block;}
+#prev {left: 20px;background: url(../images/ui-slider-arrow.png) no-repeat;border-radius: 5px;}
+#next {right: 20px;background: url(../images/ui-slider-arrow.png) no-repeat -40px;border-radius: 5px;}
+
+/* 主体内容：快速预约及帮助中心 */
+.quickAppointment{width: 248px; height: 255px;margin-top: 9px;margin-left: 9px;float:right;background-color:#fafafa;text-align: center;padding-top: 15px;box-sizing: border-box;}
+.quickAppointment span{background:url(../images/icon-help.png) no-repeat; padding-left: 25px;font-size: 18px;font-weight: lighter;color: #fec009;}
+.inputs{height: 200px;margin-top: 15px;}
+.inputs select{width:170px;height: 26px; margin-bottom: 10px;font-size: 12px;border: 1px solid #dcdddd;color: #666;}
+.button-quickQuery{width: 108px;height: 33px;margin:5px auto; background-color: #fecd09;font-size: 14px;color: #fff;border-radius: 3px;text-align: center;line-height: 33px;}
+.helpCneter{width: 248px;height:150px;float: left;margin-top:9px;margin-left:9px;background-color:#fafafa;text-align: center;padding-top: 15px;box-sizing: border-box;}
+.helpCneter span{background:url(../images/icon-help.png) no-repeat 0 -22px; padding-left: 25px;font-size: 18px;font-weight: lighter;color:#00B3EA}
+.helpCneter section{margin-top: 15px;}
+.helpCneter section a{width: 86px;height: 26px;margin-left:26px;margin-bottom: 8px;font-size: 14px;float: left;color: #00B3EA;}
+
+/* 主体内容：tab标签切换 */
+.tabs{width: 742px;height: 488px;font-size: 16px;margin-top: 10px;margin-bottom: 38px;float: left;box-sizing: border-box;border: 1px solid #f4f6fa;}
+#tabBar{width: 742px;height: 34px;float: left;background-color: #f4f6fa;}
+#tabBar ul{width: 742px;height: 34px ;text-align: center;}
+#tabBar li{width: 112px;height: 34px;list-style-type: none;float: left;background-color: #f4f6fa;font-size: 16px;color: #00B3EA;line-height: 34px;text-align: center;}
+#subtabBar{width: 742px;height: 45px;float: left;line-height: 43px;padding: 10px;box-sizing: border-box;border-bottom: 1px solid #f4f6fa;}
+#subtabBar ul{height: 34px ;text-align: center;}
+#subtabBar li{width: 56px;height: 26px;list-style-type: none;float: left;font-size: 12px;color: #000;line-height: 26px;text-align: center;}
+.tabContent{width: 742px;height: 419px;display: none;float: left;}
+.tabsContent{height: 400px;font-size: 16px;}
+.tabsContent img{width: 110px;height: 98px;margin-right: 10px;float: left;}
+.tabsContent section{width: 356px;height: 95px;margin-top: 16px; margin-left: 12px;float: left;box-sizing: border-box;}
+.spanCtrl{font-size: 12px;color: #666;float: left;line-height: 18px;padding-bottom: 3px;}
+.hospitalName{font-size: 14px;color: #036EB7;float: left;margin-top: 10px;}
+.hospitalGrade{font-size: 12px;color: #979797;float: right;margin-top: 10px;margin-right: 20px;}
+.as a{width: 351px;height: 30px;margin-top: 8px;margin-left: 12px;; font-size: 12px;color: #666;float: left;border-bottom: 1px dashed #dcdddd;line-height: 30px;}
+.as a span{float: right;color: #979797;font-size: 12px;}
+.backToTop{width: 716px;height: 55px; float: left;color: #5084C4;;font-size: 14px;line-height: 55px;text-align: center;}
+
+/* 主体内容：最新公告及听诊公告 */
+.news{width: 249px; height: 239px;float: left;margin-left: 9px;margin-top: 10px;border: 1px solid #f4f6fa;box-sizing: border-box;}
+.news-title{width: 248px;height:38px;padding:0 20px; font-size: 15px;color: #fec009;background-color: #f4f6fa;line-height: 38px;box-sizing: border-box;}
+.news-title a{font-size: 12px;color: #868686; float: right;line-height: 38px;}
+.news section{width: 250px; height: 202px; padding-left: 35px;padding-top: 14px;background: url(../images/list-yellow.jpg) no-repeat 20px 20px;box-sizing: border-box;}
+.news section a{width: 193px; height: 29px;font-size: 12px;color: #969696;line-height: 29px;float: left;}
+.news section a:hover{color:#4c4948}
+.stopAdmissionNews{width: 249px; height: 239px;float: left;margin: 10px 0 38px 9px;border: 1px solid #f4f6fa;box-sizing: border-box;}
+.stopAdmissionNews-title{width: 248px;height:38px;padding:0 20px; font-size: 15px;color: #4ab4ed;background-color: #f4f6fa;line-height: 38px;box-sizing: border-box;}
+.stopAdmissionNews-title a{font-size: 12px;color: #868686; float: right;line-height: 38px;}
+.stopAdmissionNews section{width: 250px; height: 202px; padding-left: 35px;padding-top: 14px;background: url(../images/list-blue.jpg) no-repeat 20px 20px;box-sizing: border-box;}
+.stopAdmissionNews section a{width: 193px; height: 29px;font-size: 12px;color: #969696;line-height: 29px;float: left;}
+.stopAdmissionNews section a:hover{color:#4c4948}
+
+/* 页脚 */
+footer{width: 100%;height: 70px;background-color: #eceef2; font-size: 12px;color: #acacac;float: left;line-height: 70px;box-sizing:content-box;}
+footer span{font-size: 12px;color: #acacac;box-sizing:border-box;}
